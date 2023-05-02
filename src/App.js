@@ -1,10 +1,12 @@
-import Hello from "./components/Hello";
+import Nav from "./components/Navbar";
+import Hero from "./components/Hero";
 
 const App = () => {
     return (
-        <>
-            <Hello />
-        </>
+        <div className="max-w-xl mx-auto">
+            <Nav />
+            <Hero />
+        </div>
     )
 }
 
