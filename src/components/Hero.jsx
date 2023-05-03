@@ -2,7 +2,7 @@ import pics from '../img/masonry.png';
 
 function Hero() {
     return (      
-        <section className="container flex flex-col pt-7 pl-9 items-start">  
+        <section className="container flex flex-col pt-7 pl-9 items-start mb-12">  
             <div className="w-full">
                 <img src={pics} className="w-96 mb-8 mx-auto" alt="airbnb views" />
             </div>       
