@@ -1,3 +1,3 @@
 # A react project starter setup 
 
-## with tailwindcss and webpack5
+## Scrimba course: airbnb project with tailwindcss and webpack5
