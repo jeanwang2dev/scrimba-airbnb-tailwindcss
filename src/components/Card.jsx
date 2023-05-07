@@ -10,7 +10,7 @@ export default function Card(props) {
     }
     return (
         <>
-            <div className="card relative w-fit text-xs shrink-0 pb-5">
+            <div className="card relative w-44 text-xs shrink-0 pb-5">
                 { badgeText && <div className="absolute top-1.5 left-1.5 rounded-sm bg-white text-black p-1.5 font-semibold">{badgeText}</div>}
                 <img className="mb-2" src={props.node.cardMeta.coverimg.sourceUrl} alt="card feature" />
                 <div className="flex justify-items-start items-baseline space-x-1 mb-2">
