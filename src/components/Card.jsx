@@ -17,7 +17,7 @@ export default function Card(props) {
                     <img className="w-3.5 h-3.5" src={starimg} alt="" />
                     <span>{props.stats.rating}</span>
                     <span className="text-slate-500">({props.stats.reviewCount}) • </span>
-                    <span className="text-slate-500">{props.country}</span>
+                    <span className="text-slate-500">{props.location}</span>
                 </div>
                 <p className="overflow-hidden leading-3 mb-2">{props.title}</p>
                 <p className="leading-3"> <span className="font-semibold">From ${props.price}</span>  / person</p>
