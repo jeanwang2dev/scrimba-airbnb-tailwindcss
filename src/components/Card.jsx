@@ -5,7 +5,7 @@ export default function Card(props) {
     let badgeText;
     if (props.node.cardMeta.openspots === 0 || props.node.cardMeta.openspots === null) {
         badgeText = "SOLD OUT"
-    } else if (props.node.cardMeta.location === "Online") {
+    } else if (props.node.cardMeta.location.toLowerCase() === "online") {
         badgeText = "ONLINE"
     }
     return (
