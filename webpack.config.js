@@ -1,10 +1,24 @@
-const path = require("path");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const path = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); 
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const BundleAnalyzerPlugin = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 let mode = process.env.NODE_ENV === "production" ? "production": "development";
+
+const plugins = [
+  new CleanWebpackPlugin(),
+  new MiniCssExtractPlugin({
+    filename: 'main.css',
+  }),
+  new HtmlWebpackPlugin({
+    template: path.join(__dirname, "public", "index.html"),
+  }), 
+];
+
+// if(mode === "production") {
+//   plugins.push( new BundleAnalyzerPlugin() );
+// }
 
 module.exports = {
   mode: mode,
@@ -54,16 +68,7 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-      new CleanWebpackPlugin(),
-      new MiniCssExtractPlugin({
-        filename: 'main.css',
-      }),
-      new HtmlWebpackPlugin({
-        template: path.join(__dirname, "public", "index.html"),
-      }),
-      new BundleAnalyzerPlugin()
-  ],
+  plugins,
   devServer: {
     static: {
       directory: path.join(__dirname, "build"),
