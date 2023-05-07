@@ -1,3 +1,4 @@
+import React from "react";
 import logo from '../img/airbnbLogo.svg';
 
 export default function Nav() {
