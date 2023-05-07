@@ -35,7 +35,8 @@ function DisplayCards() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  console.log(data.cards.edges[0].node.cardMeta.stats.reviewcount);
+  console.log(data.cards);
+  //.edges[2].node.cardMeta.stats.reviewcount
 
   return data.cards.edges.map(( item, key ) => (
     <Card 
