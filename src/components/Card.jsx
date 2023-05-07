@@ -16,7 +16,7 @@ export default function Card(props) {
                 <div className="flex justify-items-start items-baseline space-x-1 mb-2">
                     <img className="w-3.5 h-3.5" src={starimg} alt="" />
                     <span>{props.node.cardMeta.stats.rating}</span>
-                    <span className="text-slate-500">({props.node.cardMeta.stats.reviewCount}) • </span>
+                    <span className="text-slate-500">({props.node.cardMeta.stats.reviewcount}) • </span>
                     <span className="text-slate-500">{props.node.cardMeta.location}</span>
                 </div>
                 <p className="overflow-hidden leading-3 mb-2">{props.node.cardMeta.title}</p>
