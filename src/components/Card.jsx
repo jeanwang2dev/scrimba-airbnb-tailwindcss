@@ -15,15 +15,9 @@ export default function Card(props) {
                 <img className="mb-2" src={props.node.cardMeta.coverimg.sourceUrl} alt="card feature" />
                 <div className="flex justify-items-start items-baseline space-x-1 mb-2">
                     <img className="w-3.5 h-3.5" src={starimg} alt="" />
-<<<<<<< HEAD
-                    <span>{props.stats.rating}</span>
-                    <span className="text-slate-500">({props.stats.reviewCount}) • </span>
-                    <span className="text-slate-500">{props.location}</span>
-=======
                     <span>{props.node.cardMeta.stats.rating}</span>
-                    <span className="text-slate-500">({props.node.cardMeta.stats.reviewcount === null ? 0 : props.node.cardMeta.stats.reviewcount }) • </span>
+                    <span className="text-slate-500">({props.node.cardMeta.stats.reviewCount}) • </span>
                     <span className="text-slate-500">{props.node.cardMeta.location}</span>
->>>>>>> getwpdata
                 </div>
                 <p className="overflow-hidden leading-3 mb-2">{props.node.cardMeta.title}</p>
                 <p className="leading-3"> <span className="font-semibold">From ${props.node.cardMeta.price}</span>  / person</p>
