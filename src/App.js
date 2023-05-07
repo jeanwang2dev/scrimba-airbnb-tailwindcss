@@ -2,7 +2,6 @@ import React from "react";
 import Nav from "./components/Navbar";
 import Hero from "./components/Hero";
 import Card from "./components/Card";
-import data from "./data";
 import { useQuery, gql } from '@apollo/client';
 
 const GET_CARDS = gql`
