@@ -6,7 +6,7 @@ import { useQuery, gql } from '@apollo/client';
 
 const GET_CARDS = gql`
       query GetCards {
-        cards {
+        cards(where:{orderby: {field:DATE,order: DESC}}) {
             edges {
               node {               
                 cardMeta {
@@ -34,7 +34,7 @@ function DisplayCards() {
   if (loading) return <p>Loading...</p>;
   if (error) return <p>Error : {error.message}</p>;
 
-  console.log(data.cards);
+  console.log(data);
   //.edges[2].node.cardMeta.stats.reviewcount
 
   return data.cards.edges.map(( item, key ) => (
